@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".EncryptTextFromFile">
+
+    <EditText
+        android:id="@+id/editTextUserSecretKey"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="23dp"
+        android:hint="enter your key"
+        app:layout_constraintBottom_toTopOf="@+id/editTextFilePath"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextFilePath"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="27dp"
+        android:gravity="start"
+        android:hint="file content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUserSecretKey"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="57dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFilePath"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/buttonBrowsFile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Brows"
+            tools:layout_editor_absoluteX="314dp"
+            tools:layout_editor_absoluteY="448dp" />
+
+        <Button
+            android:id="@+id/buttonBrowsFileCancelOperation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:text="Cancel"
+            tools:layout_editor_absoluteX="314dp"
+            tools:layout_editor_absoluteY="448dp" />
+
+        <Button
+            android:id="@+id/buttonConfirmPath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Confirm"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="448dp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
